@@ -1,0 +1,7999 @@
+// source: penumbra/core/component/stake/v1alpha1/stake.proto
+/**
+ * @fileoverview
+ * @enhanceable
+ * @suppress {missingRequire} reports error on implicit type usages.
+ * @suppress {messageConventions} JS Compiler reports an error if a variable or
+ *     field starts with 'MSG_' and isn't a translatable message.
+ * @public
+ */
+// GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
+// @ts-nocheck
+
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = (function() {
+  if (this) { return this; }
+  if (typeof window !== 'undefined') { return window; }
+  if (typeof global !== 'undefined') { return global; }
+  if (typeof self !== 'undefined') { return self; }
+  return Function('return this')();
+}.call(null));
+
+var penumbra_core_keys_v1alpha1_keys_pb = require('../../../../../penumbra/core/keys/v1alpha1/keys_pb.js');
+goog.object.extend(proto, penumbra_core_keys_v1alpha1_keys_pb);
+var penumbra_core_num_v1alpha1_num_pb = require('../../../../../penumbra/core/num/v1alpha1/num_pb.js');
+goog.object.extend(proto, penumbra_core_num_v1alpha1_num_pb);
+var penumbra_core_asset_v1alpha1_asset_pb = require('../../../../../penumbra/core/asset/v1alpha1/asset_pb.js');
+goog.object.extend(proto, penumbra_core_asset_v1alpha1_asset_pb);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.BaseRateData', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.BondingState', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.BondingState.BondingStateEnum', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.Delegate', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.DelegationChanges', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.FundingStream', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.FundingStream.RecipientCase', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.GenesisContent', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.Penalty', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.RateData', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.StakeParameters', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.Undelegate', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.Uptime', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.Validator', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ValidatorList', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ValidatorState', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ValidatorState.ValidatorStateEnum', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse', null, global);
+goog.exportSymbol('proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof', null, global);
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.displayName = 'proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.penumbra.core.component.stake.v1alpha1.Validator.repeatedFields_, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.Validator, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.Validator.displayName = 'proto.penumbra.core.component.stake.v1alpha1.Validator';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorList = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.penumbra.core.component.stake.v1alpha1.ValidatorList.repeatedFields_, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.ValidatorList, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorList.displayName = 'proto.penumbra.core.component.stake.v1alpha1.ValidatorList';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.penumbra.core.component.stake.v1alpha1.FundingStream.oneofGroups_);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.FundingStream, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.FundingStream.displayName = 'proto.penumbra.core.component.stake.v1alpha1.FundingStream';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.displayName = 'proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.displayName = 'proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.RateData, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.RateData.displayName = 'proto.penumbra.core.component.stake.v1alpha1.RateData';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.BaseRateData, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.BaseRateData.displayName = 'proto.penumbra.core.component.stake.v1alpha1.BaseRateData';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.displayName = 'proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.BondingState = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.BondingState, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.BondingState.displayName = 'proto.penumbra.core.component.stake.v1alpha1.BondingState';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorState = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.ValidatorState, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorState.displayName = 'proto.penumbra.core.component.stake.v1alpha1.ValidatorState';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.displayName = 'proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.displayName = 'proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.Delegate, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.Delegate.displayName = 'proto.penumbra.core.component.stake.v1alpha1.Delegate';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.Undelegate, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.Undelegate.displayName = 'proto.penumbra.core.component.stake.v1alpha1.Undelegate';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.displayName = 'proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.displayName = 'proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.displayName = 'proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.repeatedFields_, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.DelegationChanges, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.displayName = 'proto.penumbra.core.component.stake.v1alpha1.DelegationChanges';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.Uptime, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.Uptime.displayName = 'proto.penumbra.core.component.stake.v1alpha1.Uptime';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.repeatedFields_, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.displayName = 'proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.Penalty = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.Penalty, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.Penalty.displayName = 'proto.penumbra.core.component.stake.v1alpha1.Penalty';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.displayName = 'proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.displayName = 'proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.displayName = 'proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.displayName = 'proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.displayName = 'proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.displayName = 'proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.displayName = 'proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.displayName = 'proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.displayName = 'proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.displayName = 'proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.StakeParameters, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.StakeParameters.displayName = 'proto.penumbra.core.component.stake.v1alpha1.StakeParameters';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.penumbra.core.component.stake.v1alpha1.GenesisContent.repeatedFields_, null);
+};
+goog.inherits(proto.penumbra.core.component.stake.v1alpha1.GenesisContent, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.penumbra.core.component.stake.v1alpha1.GenesisContent.displayName = 'proto.penumbra.core.component.stake.v1alpha1.GenesisContent';
+}
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    inner: msg.getInner_asB64()
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof;
+  return proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setInner(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getInner_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional bytes inner = 1;
+ * @return {!(string|Uint8Array)}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.prototype.getInner = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * optional bytes inner = 1;
+ * This is a type-conversion wrapper around `getInner()`
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.prototype.getInner_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getInner()));
+};
+
+
+/**
+ * optional bytes inner = 1;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getInner()`
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.prototype.getInner_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getInner()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ZKUndelegateClaimProof.prototype.setInner = function(value) {
+  return jspb.Message.setProto3BytesField(this, 1, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.repeatedFields_ = [6];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.Validator.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Validator} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identityKey: (f = msg.getIdentityKey()) && penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.toObject(includeInstance, f),
+    consensusKey: msg.getConsensusKey_asB64(),
+    name: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    website: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    description: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    enabled: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
+    fundingStreamsList: jspb.Message.toObjectList(msg.getFundingStreamsList(),
+    proto.penumbra.core.component.stake.v1alpha1.FundingStream.toObject, includeInstance),
+    sequenceNumber: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    governanceKey: (f = msg.getGovernanceKey()) && penumbra_core_keys_v1alpha1_keys_pb.GovernanceKey.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.Validator;
+  return proto.penumbra.core.component.stake.v1alpha1.Validator.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Validator} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.IdentityKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.deserializeBinaryFromReader);
+      msg.setIdentityKey(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setConsensusKey(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setWebsite(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDescription(value);
+      break;
+    case 8:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setEnabled(value);
+      break;
+    case 6:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.FundingStream;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.FundingStream.deserializeBinaryFromReader);
+      msg.addFundingStreams(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setSequenceNumber(value);
+      break;
+    case 9:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.GovernanceKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.GovernanceKey.deserializeBinaryFromReader);
+      msg.setGovernanceKey(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.Validator.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Validator} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getIdentityKey();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.serializeBinaryToWriter
+    );
+  }
+  f = message.getConsensusKey_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      2,
+      f
+    );
+  }
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getWebsite();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getDescription();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = message.getEnabled();
+  if (f) {
+    writer.writeBool(
+      8,
+      f
+    );
+  }
+  f = message.getFundingStreamsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      6,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.FundingStream.serializeBinaryToWriter
+    );
+  }
+  f = message.getSequenceNumber();
+  if (f !== 0) {
+    writer.writeUint32(
+      7,
+      f
+    );
+  }
+  f = message.getGovernanceKey();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.GovernanceKey.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional penumbra.core.keys.v1alpha1.IdentityKey identity_key = 1;
+ * @return {?proto.penumbra.core.keys.v1alpha1.IdentityKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.getIdentityKey = function() {
+  return /** @type{?proto.penumbra.core.keys.v1alpha1.IdentityKey} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.IdentityKey, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.keys.v1alpha1.IdentityKey|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.setIdentityKey = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.clearIdentityKey = function() {
+  return this.setIdentityKey(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.hasIdentityKey = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional bytes consensus_key = 2;
+ * @return {!(string|Uint8Array)}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.getConsensusKey = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * optional bytes consensus_key = 2;
+ * This is a type-conversion wrapper around `getConsensusKey()`
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.getConsensusKey_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getConsensusKey()));
+};
+
+
+/**
+ * optional bytes consensus_key = 2;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getConsensusKey()`
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.getConsensusKey_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getConsensusKey()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.setConsensusKey = function(value) {
+  return jspb.Message.setProto3BytesField(this, 2, value);
+};
+
+
+/**
+ * optional string name = 3;
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.setName = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string website = 4;
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.getWebsite = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.setWebsite = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional string description = 5;
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.getDescription = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.setDescription = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional bool enabled = 8;
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.getEnabled = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.setEnabled = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 8, value);
+};
+
+
+/**
+ * repeated FundingStream funding_streams = 6;
+ * @return {!Array<!proto.penumbra.core.component.stake.v1alpha1.FundingStream>}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.getFundingStreamsList = function() {
+  return /** @type{!Array<!proto.penumbra.core.component.stake.v1alpha1.FundingStream>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.FundingStream, 6));
+};
+
+
+/**
+ * @param {!Array<!proto.penumbra.core.component.stake.v1alpha1.FundingStream>} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.setFundingStreamsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 6, value);
+};
+
+
+/**
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.FundingStream=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.addFundingStreams = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.penumbra.core.component.stake.v1alpha1.FundingStream, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.clearFundingStreamsList = function() {
+  return this.setFundingStreamsList([]);
+};
+
+
+/**
+ * optional uint32 sequence_number = 7;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.getSequenceNumber = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.setSequenceNumber = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
+};
+
+
+/**
+ * optional penumbra.core.keys.v1alpha1.GovernanceKey governance_key = 9;
+ * @return {?proto.penumbra.core.keys.v1alpha1.GovernanceKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.getGovernanceKey = function() {
+  return /** @type{?proto.penumbra.core.keys.v1alpha1.GovernanceKey} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.GovernanceKey, 9));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.keys.v1alpha1.GovernanceKey|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.setGovernanceKey = function(value) {
+  return jspb.Message.setWrapperField(this, 9, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.clearGovernanceKey = function() {
+  return this.setGovernanceKey(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Validator.prototype.hasGovernanceKey = function() {
+  return jspb.Message.getField(this, 9) != null;
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorList.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorList.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorList.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorList} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorList.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    validatorKeysList: jspb.Message.toObjectList(msg.getValidatorKeysList(),
+    penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorList}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorList.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.ValidatorList;
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorList.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorList} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorList}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorList.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.IdentityKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.deserializeBinaryFromReader);
+      msg.addValidatorKeys(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorList.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorList.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorList} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorList.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValidatorKeysList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated penumbra.core.keys.v1alpha1.IdentityKey validator_keys = 1;
+ * @return {!Array<!proto.penumbra.core.keys.v1alpha1.IdentityKey>}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorList.prototype.getValidatorKeysList = function() {
+  return /** @type{!Array<!proto.penumbra.core.keys.v1alpha1.IdentityKey>} */ (
+    jspb.Message.getRepeatedWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.IdentityKey, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.penumbra.core.keys.v1alpha1.IdentityKey>} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorList} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorList.prototype.setValidatorKeysList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.penumbra.core.keys.v1alpha1.IdentityKey=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.penumbra.core.keys.v1alpha1.IdentityKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorList.prototype.addValidatorKeys = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.penumbra.core.keys.v1alpha1.IdentityKey, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorList} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorList.prototype.clearValidatorKeysList = function() {
+  return this.setValidatorKeysList([]);
+};
+
+
+
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.oneofGroups_ = [[1,2]];
+
+/**
+ * @enum {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.RecipientCase = {
+  RECIPIENT_NOT_SET: 0,
+  TO_ADDRESS: 1,
+  TO_DAO: 2
+};
+
+/**
+ * @return {proto.penumbra.core.component.stake.v1alpha1.FundingStream.RecipientCase}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.prototype.getRecipientCase = function() {
+  return /** @type {proto.penumbra.core.component.stake.v1alpha1.FundingStream.RecipientCase} */(jspb.Message.computeOneofCase(this, proto.penumbra.core.component.stake.v1alpha1.FundingStream.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.FundingStream.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.FundingStream} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    toAddress: (f = msg.getToAddress()) && proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.toObject(includeInstance, f),
+    toDao: (f = msg.getToDao()) && proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.FundingStream;
+  return proto.penumbra.core.component.stake.v1alpha1.FundingStream.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.FundingStream} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.deserializeBinaryFromReader);
+      msg.setToAddress(value);
+      break;
+    case 2:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.deserializeBinaryFromReader);
+      msg.setToDao(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.FundingStream.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.FundingStream} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getToAddress();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.serializeBinaryToWriter
+    );
+  }
+  f = message.getToDao();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    address: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    rateBps: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress;
+  return proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAddress(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setRateBps(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getAddress();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getRateBps();
+  if (f !== 0) {
+    writer.writeUint32(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string address = 1;
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.prototype.getAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.prototype.setAddress = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional uint32 rate_bps = 2;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.prototype.getRateBps = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress.prototype.setRateBps = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    rateBps: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao;
+  return proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 2:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setRateBps(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getRateBps();
+  if (f !== 0) {
+    writer.writeUint32(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional uint32 rate_bps = 2;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.prototype.getRateBps = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao.prototype.setRateBps = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional ToAddress to_address = 1;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.prototype.getToAddress = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToAddress|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.prototype.setToAddress = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 1, proto.penumbra.core.component.stake.v1alpha1.FundingStream.oneofGroups_[0], value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.prototype.clearToAddress = function() {
+  return this.setToAddress(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.prototype.hasToAddress = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional ToDao to_dao = 2;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.prototype.getToDao = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao, 2));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.FundingStream.ToDao|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.prototype.setToDao = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 2, proto.penumbra.core.component.stake.v1alpha1.FundingStream.oneofGroups_[0], value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.FundingStream} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.prototype.clearToDao = function() {
+  return this.setToDao(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.FundingStream.prototype.hasToDao = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.RateData.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.RateData} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identityKey: (f = msg.getIdentityKey()) && penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.toObject(includeInstance, f),
+    epochIndex: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    validatorRewardRate: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    validatorExchangeRate: jspb.Message.getFieldWithDefault(msg, 5, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.RateData}
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.RateData;
+  return proto.penumbra.core.component.stake.v1alpha1.RateData.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.RateData} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.RateData}
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.IdentityKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.deserializeBinaryFromReader);
+      msg.setIdentityKey(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setEpochIndex(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setValidatorRewardRate(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setValidatorExchangeRate(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.RateData.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.RateData} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getIdentityKey();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.serializeBinaryToWriter
+    );
+  }
+  f = message.getEpochIndex();
+  if (f !== 0) {
+    writer.writeUint64(
+      2,
+      f
+    );
+  }
+  f = message.getValidatorRewardRate();
+  if (f !== 0) {
+    writer.writeUint64(
+      4,
+      f
+    );
+  }
+  f = message.getValidatorExchangeRate();
+  if (f !== 0) {
+    writer.writeUint64(
+      5,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional penumbra.core.keys.v1alpha1.IdentityKey identity_key = 1;
+ * @return {?proto.penumbra.core.keys.v1alpha1.IdentityKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.prototype.getIdentityKey = function() {
+  return /** @type{?proto.penumbra.core.keys.v1alpha1.IdentityKey} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.IdentityKey, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.keys.v1alpha1.IdentityKey|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.RateData} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.RateData.prototype.setIdentityKey = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.RateData} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.prototype.clearIdentityKey = function() {
+  return this.setIdentityKey(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.prototype.hasIdentityKey = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional uint64 epoch_index = 2;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.prototype.getEpochIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.RateData} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.prototype.setEpochIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional uint64 validator_reward_rate = 4;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.prototype.getValidatorRewardRate = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.RateData} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.prototype.setValidatorRewardRate = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional uint64 validator_exchange_rate = 5;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.prototype.getValidatorExchangeRate = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.RateData} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.RateData.prototype.setValidatorExchangeRate = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.BaseRateData.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.BaseRateData} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    epochIndex: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    baseRewardRate: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    baseExchangeRate: jspb.Message.getFieldWithDefault(msg, 3, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.BaseRateData}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.BaseRateData;
+  return proto.penumbra.core.component.stake.v1alpha1.BaseRateData.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.BaseRateData} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.BaseRateData}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setEpochIndex(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setBaseRewardRate(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setBaseExchangeRate(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.BaseRateData.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.BaseRateData} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getEpochIndex();
+  if (f !== 0) {
+    writer.writeUint64(
+      1,
+      f
+    );
+  }
+  f = message.getBaseRewardRate();
+  if (f !== 0) {
+    writer.writeUint64(
+      2,
+      f
+    );
+  }
+  f = message.getBaseExchangeRate();
+  if (f !== 0) {
+    writer.writeUint64(
+      3,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional uint64 epoch_index = 1;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData.prototype.getEpochIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.BaseRateData} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData.prototype.setEpochIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional uint64 base_reward_rate = 2;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData.prototype.getBaseRewardRate = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.BaseRateData} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData.prototype.setBaseRewardRate = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional uint64 base_exchange_rate = 3;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData.prototype.getBaseExchangeRate = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.BaseRateData} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.BaseRateData.prototype.setBaseExchangeRate = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identityKey: (f = msg.getIdentityKey()) && penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.toObject(includeInstance, f),
+    state: (f = msg.getState()) && proto.penumbra.core.component.stake.v1alpha1.ValidatorState.toObject(includeInstance, f),
+    votingPower: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    bondingState: (f = msg.getBondingState()) && proto.penumbra.core.component.stake.v1alpha1.BondingState.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus;
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.IdentityKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.deserializeBinaryFromReader);
+      msg.setIdentityKey(value);
+      break;
+    case 2:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.ValidatorState;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.ValidatorState.deserializeBinaryFromReader);
+      msg.setState(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setVotingPower(value);
+      break;
+    case 4:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.BondingState;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.BondingState.deserializeBinaryFromReader);
+      msg.setBondingState(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getIdentityKey();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.serializeBinaryToWriter
+    );
+  }
+  f = message.getState();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.ValidatorState.serializeBinaryToWriter
+    );
+  }
+  f = message.getVotingPower();
+  if (f !== 0) {
+    writer.writeUint64(
+      3,
+      f
+    );
+  }
+  f = message.getBondingState();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.BondingState.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional penumbra.core.keys.v1alpha1.IdentityKey identity_key = 1;
+ * @return {?proto.penumbra.core.keys.v1alpha1.IdentityKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.getIdentityKey = function() {
+  return /** @type{?proto.penumbra.core.keys.v1alpha1.IdentityKey} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.IdentityKey, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.keys.v1alpha1.IdentityKey|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.setIdentityKey = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.clearIdentityKey = function() {
+  return this.setIdentityKey(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.hasIdentityKey = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional ValidatorState state = 2;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.ValidatorState}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.getState = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.ValidatorState} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.ValidatorState, 2));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.ValidatorState|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.setState = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.clearState = function() {
+  return this.setState(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.hasState = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional uint64 voting_power = 3;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.getVotingPower = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.setVotingPower = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional BondingState bonding_state = 4;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.BondingState}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.getBondingState = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.BondingState} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.BondingState, 4));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.BondingState|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.setBondingState = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.clearBondingState = function() {
+  return this.setBondingState(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.prototype.hasBondingState = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BondingState.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.BondingState.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.BondingState} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.BondingState.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    state: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    unbondingEpoch: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.BondingState}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BondingState.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.BondingState;
+  return proto.penumbra.core.component.stake.v1alpha1.BondingState.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.BondingState} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.BondingState}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BondingState.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {!proto.penumbra.core.component.stake.v1alpha1.BondingState.BondingStateEnum} */ (reader.readEnum());
+      msg.setState(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setUnbondingEpoch(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BondingState.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.BondingState.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.BondingState} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.BondingState.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getState();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      1,
+      f
+    );
+  }
+  f = message.getUnbondingEpoch();
+  if (f !== 0) {
+    writer.writeUint64(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * @enum {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BondingState.BondingStateEnum = {
+  BONDING_STATE_ENUM_UNSPECIFIED: 0,
+  BONDING_STATE_ENUM_BONDED: 1,
+  BONDING_STATE_ENUM_UNBONDING: 2,
+  BONDING_STATE_ENUM_UNBONDED: 3
+};
+
+/**
+ * optional BondingStateEnum state = 1;
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.BondingState.BondingStateEnum}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BondingState.prototype.getState = function() {
+  return /** @type {!proto.penumbra.core.component.stake.v1alpha1.BondingState.BondingStateEnum} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/**
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.BondingState.BondingStateEnum} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.BondingState} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.BondingState.prototype.setState = function(value) {
+  return jspb.Message.setProto3EnumField(this, 1, value);
+};
+
+
+/**
+ * optional uint64 unbonding_epoch = 2;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.BondingState.prototype.getUnbondingEpoch = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.BondingState} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.BondingState.prototype.setUnbondingEpoch = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorState.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorState.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorState} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorState.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    state: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorState}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorState.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.ValidatorState;
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorState.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorState} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorState}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorState.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {!proto.penumbra.core.component.stake.v1alpha1.ValidatorState.ValidatorStateEnum} */ (reader.readEnum());
+      msg.setState(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorState.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorState.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorState} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorState.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getState();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * @enum {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorState.ValidatorStateEnum = {
+  VALIDATOR_STATE_ENUM_UNSPECIFIED: 0,
+  VALIDATOR_STATE_ENUM_INACTIVE: 1,
+  VALIDATOR_STATE_ENUM_ACTIVE: 2,
+  VALIDATOR_STATE_ENUM_JAILED: 3,
+  VALIDATOR_STATE_ENUM_TOMBSTONED: 4,
+  VALIDATOR_STATE_ENUM_DISABLED: 5
+};
+
+/**
+ * optional ValidatorStateEnum state = 1;
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorState.ValidatorStateEnum}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorState.prototype.getState = function() {
+  return /** @type {!proto.penumbra.core.component.stake.v1alpha1.ValidatorState.ValidatorStateEnum} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/**
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorState.ValidatorStateEnum} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorState} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorState.prototype.setState = function(value) {
+  return jspb.Message.setProto3EnumField(this, 1, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    validator: (f = msg.getValidator()) && proto.penumbra.core.component.stake.v1alpha1.Validator.toObject(includeInstance, f),
+    status: (f = msg.getStatus()) && proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.toObject(includeInstance, f),
+    rateData: (f = msg.getRateData()) && proto.penumbra.core.component.stake.v1alpha1.RateData.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo;
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.Validator;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.Validator.deserializeBinaryFromReader);
+      msg.setValidator(value);
+      break;
+    case 2:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.deserializeBinaryFromReader);
+      msg.setStatus(value);
+      break;
+    case 3:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.RateData;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.RateData.deserializeBinaryFromReader);
+      msg.setRateData(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValidator();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.Validator.serializeBinaryToWriter
+    );
+  }
+  f = message.getStatus();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.serializeBinaryToWriter
+    );
+  }
+  f = message.getRateData();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.RateData.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Validator validator = 1;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.Validator}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.getValidator = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.Validator} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.Validator, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.Validator|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.setValidator = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.clearValidator = function() {
+  return this.setValidator(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.hasValidator = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional ValidatorStatus status = 2;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.getStatus = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus, 2));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.setStatus = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.clearStatus = function() {
+  return this.setStatus(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.hasStatus = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional RateData rate_data = 3;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.RateData}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.getRateData = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.RateData} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.RateData, 3));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.RateData|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.setRateData = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.clearRateData = function() {
+  return this.setRateData(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.prototype.hasRateData = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    validator: (f = msg.getValidator()) && proto.penumbra.core.component.stake.v1alpha1.Validator.toObject(includeInstance, f),
+    authSig: msg.getAuthSig_asB64()
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition;
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.Validator;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.Validator.deserializeBinaryFromReader);
+      msg.setValidator(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setAuthSig(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValidator();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.Validator.serializeBinaryToWriter
+    );
+  }
+  f = message.getAuthSig_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional Validator validator = 1;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.Validator}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.prototype.getValidator = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.Validator} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.Validator, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.Validator|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.prototype.setValidator = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.prototype.clearValidator = function() {
+  return this.setValidator(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.prototype.hasValidator = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional bytes auth_sig = 2;
+ * @return {!(string|Uint8Array)}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.prototype.getAuthSig = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * optional bytes auth_sig = 2;
+ * This is a type-conversion wrapper around `getAuthSig()`
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.prototype.getAuthSig_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getAuthSig()));
+};
+
+
+/**
+ * optional bytes auth_sig = 2;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getAuthSig()`
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.prototype.getAuthSig_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getAuthSig()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorDefinition.prototype.setAuthSig = function(value) {
+  return jspb.Message.setProto3BytesField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.Delegate.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Delegate} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    validatorIdentity: (f = msg.getValidatorIdentity()) && penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.toObject(includeInstance, f),
+    epochIndex: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    unbondedAmount: (f = msg.getUnbondedAmount()) && penumbra_core_num_v1alpha1_num_pb.Amount.toObject(includeInstance, f),
+    delegationAmount: (f = msg.getDelegationAmount()) && penumbra_core_num_v1alpha1_num_pb.Amount.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Delegate}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.Delegate;
+  return proto.penumbra.core.component.stake.v1alpha1.Delegate.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Delegate} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Delegate}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.IdentityKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.deserializeBinaryFromReader);
+      msg.setValidatorIdentity(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setEpochIndex(value);
+      break;
+    case 3:
+      var value = new penumbra_core_num_v1alpha1_num_pb.Amount;
+      reader.readMessage(value,penumbra_core_num_v1alpha1_num_pb.Amount.deserializeBinaryFromReader);
+      msg.setUnbondedAmount(value);
+      break;
+    case 4:
+      var value = new penumbra_core_num_v1alpha1_num_pb.Amount;
+      reader.readMessage(value,penumbra_core_num_v1alpha1_num_pb.Amount.deserializeBinaryFromReader);
+      msg.setDelegationAmount(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.Delegate.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Delegate} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValidatorIdentity();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.serializeBinaryToWriter
+    );
+  }
+  f = message.getEpochIndex();
+  if (f !== 0) {
+    writer.writeUint64(
+      2,
+      f
+    );
+  }
+  f = message.getUnbondedAmount();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      penumbra_core_num_v1alpha1_num_pb.Amount.serializeBinaryToWriter
+    );
+  }
+  f = message.getDelegationAmount();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      penumbra_core_num_v1alpha1_num_pb.Amount.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional penumbra.core.keys.v1alpha1.IdentityKey validator_identity = 1;
+ * @return {?proto.penumbra.core.keys.v1alpha1.IdentityKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.getValidatorIdentity = function() {
+  return /** @type{?proto.penumbra.core.keys.v1alpha1.IdentityKey} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.IdentityKey, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.keys.v1alpha1.IdentityKey|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Delegate} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.setValidatorIdentity = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Delegate} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.clearValidatorIdentity = function() {
+  return this.setValidatorIdentity(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.hasValidatorIdentity = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional uint64 epoch_index = 2;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.getEpochIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Delegate} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.setEpochIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional penumbra.core.num.v1alpha1.Amount unbonded_amount = 3;
+ * @return {?proto.penumbra.core.num.v1alpha1.Amount}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.getUnbondedAmount = function() {
+  return /** @type{?proto.penumbra.core.num.v1alpha1.Amount} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_num_v1alpha1_num_pb.Amount, 3));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.num.v1alpha1.Amount|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Delegate} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.setUnbondedAmount = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Delegate} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.clearUnbondedAmount = function() {
+  return this.setUnbondedAmount(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.hasUnbondedAmount = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional penumbra.core.num.v1alpha1.Amount delegation_amount = 4;
+ * @return {?proto.penumbra.core.num.v1alpha1.Amount}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.getDelegationAmount = function() {
+  return /** @type{?proto.penumbra.core.num.v1alpha1.Amount} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_num_v1alpha1_num_pb.Amount, 4));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.num.v1alpha1.Amount|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Delegate} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.setDelegationAmount = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Delegate} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.clearDelegationAmount = function() {
+  return this.setDelegationAmount(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Delegate.prototype.hasDelegationAmount = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.Undelegate.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Undelegate} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    validatorIdentity: (f = msg.getValidatorIdentity()) && penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.toObject(includeInstance, f),
+    startEpochIndex: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    unbondedAmount: (f = msg.getUnbondedAmount()) && penumbra_core_num_v1alpha1_num_pb.Amount.toObject(includeInstance, f),
+    delegationAmount: (f = msg.getDelegationAmount()) && penumbra_core_num_v1alpha1_num_pb.Amount.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Undelegate}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.Undelegate;
+  return proto.penumbra.core.component.stake.v1alpha1.Undelegate.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Undelegate} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Undelegate}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.IdentityKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.deserializeBinaryFromReader);
+      msg.setValidatorIdentity(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setStartEpochIndex(value);
+      break;
+    case 3:
+      var value = new penumbra_core_num_v1alpha1_num_pb.Amount;
+      reader.readMessage(value,penumbra_core_num_v1alpha1_num_pb.Amount.deserializeBinaryFromReader);
+      msg.setUnbondedAmount(value);
+      break;
+    case 4:
+      var value = new penumbra_core_num_v1alpha1_num_pb.Amount;
+      reader.readMessage(value,penumbra_core_num_v1alpha1_num_pb.Amount.deserializeBinaryFromReader);
+      msg.setDelegationAmount(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.Undelegate.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Undelegate} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValidatorIdentity();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.serializeBinaryToWriter
+    );
+  }
+  f = message.getStartEpochIndex();
+  if (f !== 0) {
+    writer.writeUint64(
+      2,
+      f
+    );
+  }
+  f = message.getUnbondedAmount();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      penumbra_core_num_v1alpha1_num_pb.Amount.serializeBinaryToWriter
+    );
+  }
+  f = message.getDelegationAmount();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      penumbra_core_num_v1alpha1_num_pb.Amount.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional penumbra.core.keys.v1alpha1.IdentityKey validator_identity = 1;
+ * @return {?proto.penumbra.core.keys.v1alpha1.IdentityKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.getValidatorIdentity = function() {
+  return /** @type{?proto.penumbra.core.keys.v1alpha1.IdentityKey} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.IdentityKey, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.keys.v1alpha1.IdentityKey|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Undelegate} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.setValidatorIdentity = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Undelegate} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.clearValidatorIdentity = function() {
+  return this.setValidatorIdentity(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.hasValidatorIdentity = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional uint64 start_epoch_index = 2;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.getStartEpochIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Undelegate} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.setStartEpochIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional penumbra.core.num.v1alpha1.Amount unbonded_amount = 3;
+ * @return {?proto.penumbra.core.num.v1alpha1.Amount}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.getUnbondedAmount = function() {
+  return /** @type{?proto.penumbra.core.num.v1alpha1.Amount} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_num_v1alpha1_num_pb.Amount, 3));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.num.v1alpha1.Amount|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Undelegate} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.setUnbondedAmount = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Undelegate} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.clearUnbondedAmount = function() {
+  return this.setUnbondedAmount(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.hasUnbondedAmount = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional penumbra.core.num.v1alpha1.Amount delegation_amount = 4;
+ * @return {?proto.penumbra.core.num.v1alpha1.Amount}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.getDelegationAmount = function() {
+  return /** @type{?proto.penumbra.core.num.v1alpha1.Amount} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_num_v1alpha1_num_pb.Amount, 4));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.num.v1alpha1.Amount|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Undelegate} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.setDelegationAmount = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Undelegate} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.clearDelegationAmount = function() {
+  return this.setDelegationAmount(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Undelegate.prototype.hasDelegationAmount = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    body: (f = msg.getBody()) && proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.toObject(includeInstance, f),
+    proof: msg.getProof_asB64()
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim;
+  return proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.deserializeBinaryFromReader);
+      msg.setBody(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setProof(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getBody();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.serializeBinaryToWriter
+    );
+  }
+  f = message.getProof_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional UndelegateClaimBody body = 1;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.prototype.getBody = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.prototype.setBody = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.prototype.clearBody = function() {
+  return this.setBody(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.prototype.hasBody = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional bytes proof = 2;
+ * @return {!(string|Uint8Array)}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.prototype.getProof = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * optional bytes proof = 2;
+ * This is a type-conversion wrapper around `getProof()`
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.prototype.getProof_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getProof()));
+};
+
+
+/**
+ * optional bytes proof = 2;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getProof()`
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.prototype.getProof_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getProof()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaim.prototype.setProof = function(value) {
+  return jspb.Message.setProto3BytesField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    validatorIdentity: (f = msg.getValidatorIdentity()) && penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.toObject(includeInstance, f),
+    startEpochIndex: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    penalty: (f = msg.getPenalty()) && proto.penumbra.core.component.stake.v1alpha1.Penalty.toObject(includeInstance, f),
+    balanceCommitment: (f = msg.getBalanceCommitment()) && penumbra_core_asset_v1alpha1_asset_pb.BalanceCommitment.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody;
+  return proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.IdentityKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.deserializeBinaryFromReader);
+      msg.setValidatorIdentity(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setStartEpochIndex(value);
+      break;
+    case 3:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.Penalty;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.Penalty.deserializeBinaryFromReader);
+      msg.setPenalty(value);
+      break;
+    case 4:
+      var value = new penumbra_core_asset_v1alpha1_asset_pb.BalanceCommitment;
+      reader.readMessage(value,penumbra_core_asset_v1alpha1_asset_pb.BalanceCommitment.deserializeBinaryFromReader);
+      msg.setBalanceCommitment(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValidatorIdentity();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.serializeBinaryToWriter
+    );
+  }
+  f = message.getStartEpochIndex();
+  if (f !== 0) {
+    writer.writeUint64(
+      2,
+      f
+    );
+  }
+  f = message.getPenalty();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.Penalty.serializeBinaryToWriter
+    );
+  }
+  f = message.getBalanceCommitment();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      penumbra_core_asset_v1alpha1_asset_pb.BalanceCommitment.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional penumbra.core.keys.v1alpha1.IdentityKey validator_identity = 1;
+ * @return {?proto.penumbra.core.keys.v1alpha1.IdentityKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.getValidatorIdentity = function() {
+  return /** @type{?proto.penumbra.core.keys.v1alpha1.IdentityKey} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.IdentityKey, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.keys.v1alpha1.IdentityKey|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.setValidatorIdentity = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.clearValidatorIdentity = function() {
+  return this.setValidatorIdentity(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.hasValidatorIdentity = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional uint64 start_epoch_index = 2;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.getStartEpochIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.setStartEpochIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional Penalty penalty = 3;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.Penalty}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.getPenalty = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.Penalty} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.Penalty, 3));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.Penalty|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.setPenalty = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.clearPenalty = function() {
+  return this.setPenalty(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.hasPenalty = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional penumbra.core.asset.v1alpha1.BalanceCommitment balance_commitment = 4;
+ * @return {?proto.penumbra.core.asset.v1alpha1.BalanceCommitment}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.getBalanceCommitment = function() {
+  return /** @type{?proto.penumbra.core.asset.v1alpha1.BalanceCommitment} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_asset_v1alpha1_asset_pb.BalanceCommitment, 4));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.asset.v1alpha1.BalanceCommitment|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.setBalanceCommitment = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.clearBalanceCommitment = function() {
+  return this.setBalanceCommitment(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimBody.prototype.hasBalanceCommitment = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    validatorIdentity: (f = msg.getValidatorIdentity()) && penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.toObject(includeInstance, f),
+    startEpochIndex: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    penalty: (f = msg.getPenalty()) && proto.penumbra.core.component.stake.v1alpha1.Penalty.toObject(includeInstance, f),
+    unbondingAmount: (f = msg.getUnbondingAmount()) && penumbra_core_num_v1alpha1_num_pb.Amount.toObject(includeInstance, f),
+    balanceBlinding: msg.getBalanceBlinding_asB64(),
+    proofBlindingR: msg.getProofBlindingR_asB64(),
+    proofBlindingS: msg.getProofBlindingS_asB64()
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan;
+  return proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.IdentityKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.deserializeBinaryFromReader);
+      msg.setValidatorIdentity(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setStartEpochIndex(value);
+      break;
+    case 4:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.Penalty;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.Penalty.deserializeBinaryFromReader);
+      msg.setPenalty(value);
+      break;
+    case 5:
+      var value = new penumbra_core_num_v1alpha1_num_pb.Amount;
+      reader.readMessage(value,penumbra_core_num_v1alpha1_num_pb.Amount.deserializeBinaryFromReader);
+      msg.setUnbondingAmount(value);
+      break;
+    case 6:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setBalanceBlinding(value);
+      break;
+    case 7:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setProofBlindingR(value);
+      break;
+    case 8:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setProofBlindingS(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValidatorIdentity();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.serializeBinaryToWriter
+    );
+  }
+  f = message.getStartEpochIndex();
+  if (f !== 0) {
+    writer.writeUint64(
+      2,
+      f
+    );
+  }
+  f = message.getPenalty();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.Penalty.serializeBinaryToWriter
+    );
+  }
+  f = message.getUnbondingAmount();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      penumbra_core_num_v1alpha1_num_pb.Amount.serializeBinaryToWriter
+    );
+  }
+  f = message.getBalanceBlinding_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      6,
+      f
+    );
+  }
+  f = message.getProofBlindingR_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      7,
+      f
+    );
+  }
+  f = message.getProofBlindingS_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      8,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional penumbra.core.keys.v1alpha1.IdentityKey validator_identity = 1;
+ * @return {?proto.penumbra.core.keys.v1alpha1.IdentityKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getValidatorIdentity = function() {
+  return /** @type{?proto.penumbra.core.keys.v1alpha1.IdentityKey} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.IdentityKey, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.keys.v1alpha1.IdentityKey|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.setValidatorIdentity = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.clearValidatorIdentity = function() {
+  return this.setValidatorIdentity(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.hasValidatorIdentity = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional uint64 start_epoch_index = 2;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getStartEpochIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.setStartEpochIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional Penalty penalty = 4;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.Penalty}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getPenalty = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.Penalty} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.Penalty, 4));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.Penalty|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.setPenalty = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.clearPenalty = function() {
+  return this.setPenalty(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.hasPenalty = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional penumbra.core.num.v1alpha1.Amount unbonding_amount = 5;
+ * @return {?proto.penumbra.core.num.v1alpha1.Amount}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getUnbondingAmount = function() {
+  return /** @type{?proto.penumbra.core.num.v1alpha1.Amount} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_num_v1alpha1_num_pb.Amount, 5));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.num.v1alpha1.Amount|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.setUnbondingAmount = function(value) {
+  return jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.clearUnbondingAmount = function() {
+  return this.setUnbondingAmount(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.hasUnbondingAmount = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional bytes balance_blinding = 6;
+ * @return {!(string|Uint8Array)}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getBalanceBlinding = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * optional bytes balance_blinding = 6;
+ * This is a type-conversion wrapper around `getBalanceBlinding()`
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getBalanceBlinding_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getBalanceBlinding()));
+};
+
+
+/**
+ * optional bytes balance_blinding = 6;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getBalanceBlinding()`
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getBalanceBlinding_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getBalanceBlinding()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.setBalanceBlinding = function(value) {
+  return jspb.Message.setProto3BytesField(this, 6, value);
+};
+
+
+/**
+ * optional bytes proof_blinding_r = 7;
+ * @return {!(string|Uint8Array)}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getProofBlindingR = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * optional bytes proof_blinding_r = 7;
+ * This is a type-conversion wrapper around `getProofBlindingR()`
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getProofBlindingR_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getProofBlindingR()));
+};
+
+
+/**
+ * optional bytes proof_blinding_r = 7;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getProofBlindingR()`
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getProofBlindingR_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getProofBlindingR()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.setProofBlindingR = function(value) {
+  return jspb.Message.setProto3BytesField(this, 7, value);
+};
+
+
+/**
+ * optional bytes proof_blinding_s = 8;
+ * @return {!(string|Uint8Array)}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getProofBlindingS = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/**
+ * optional bytes proof_blinding_s = 8;
+ * This is a type-conversion wrapper around `getProofBlindingS()`
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getProofBlindingS_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getProofBlindingS()));
+};
+
+
+/**
+ * optional bytes proof_blinding_s = 8;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getProofBlindingS()`
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.getProofBlindingS_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getProofBlindingS()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.UndelegateClaimPlan.prototype.setProofBlindingS = function(value) {
+  return jspb.Message.setProto3BytesField(this, 8, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.repeatedFields_ = [1,2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.DelegationChanges} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    delegationsList: jspb.Message.toObjectList(msg.getDelegationsList(),
+    proto.penumbra.core.component.stake.v1alpha1.Delegate.toObject, includeInstance),
+    undelegationsList: jspb.Message.toObjectList(msg.getUndelegationsList(),
+    proto.penumbra.core.component.stake.v1alpha1.Undelegate.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.DelegationChanges}
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.DelegationChanges;
+  return proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.DelegationChanges} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.DelegationChanges}
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.Delegate;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.Delegate.deserializeBinaryFromReader);
+      msg.addDelegations(value);
+      break;
+    case 2:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.Undelegate;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.Undelegate.deserializeBinaryFromReader);
+      msg.addUndelegations(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.DelegationChanges} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDelegationsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.Delegate.serializeBinaryToWriter
+    );
+  }
+  f = message.getUndelegationsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.Undelegate.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated Delegate delegations = 1;
+ * @return {!Array<!proto.penumbra.core.component.stake.v1alpha1.Delegate>}
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.prototype.getDelegationsList = function() {
+  return /** @type{!Array<!proto.penumbra.core.component.stake.v1alpha1.Delegate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.Delegate, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.penumbra.core.component.stake.v1alpha1.Delegate>} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.DelegationChanges} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.prototype.setDelegationsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Delegate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Delegate}
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.prototype.addDelegations = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.penumbra.core.component.stake.v1alpha1.Delegate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.DelegationChanges} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.prototype.clearDelegationsList = function() {
+  return this.setDelegationsList([]);
+};
+
+
+/**
+ * repeated Undelegate undelegations = 2;
+ * @return {!Array<!proto.penumbra.core.component.stake.v1alpha1.Undelegate>}
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.prototype.getUndelegationsList = function() {
+  return /** @type{!Array<!proto.penumbra.core.component.stake.v1alpha1.Undelegate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.Undelegate, 2));
+};
+
+
+/**
+ * @param {!Array<!proto.penumbra.core.component.stake.v1alpha1.Undelegate>} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.DelegationChanges} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.prototype.setUndelegationsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Undelegate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Undelegate}
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.prototype.addUndelegations = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.penumbra.core.component.stake.v1alpha1.Undelegate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.DelegationChanges} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.DelegationChanges.prototype.clearUndelegationsList = function() {
+  return this.setUndelegationsList([]);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.Uptime.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Uptime} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    asOfBlockHeight: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    windowLen: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    bitvec: msg.getBitvec_asB64()
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Uptime}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.Uptime;
+  return proto.penumbra.core.component.stake.v1alpha1.Uptime.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Uptime} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Uptime}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setAsOfBlockHeight(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setWindowLen(value);
+      break;
+    case 3:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setBitvec(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.Uptime.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Uptime} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getAsOfBlockHeight();
+  if (f !== 0) {
+    writer.writeUint64(
+      1,
+      f
+    );
+  }
+  f = message.getWindowLen();
+  if (f !== 0) {
+    writer.writeUint32(
+      2,
+      f
+    );
+  }
+  f = message.getBitvec_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      3,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional uint64 as_of_block_height = 1;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.prototype.getAsOfBlockHeight = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Uptime} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.prototype.setAsOfBlockHeight = function(value) {
+  return jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional uint32 window_len = 2;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.prototype.getWindowLen = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Uptime} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.prototype.setWindowLen = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional bytes bitvec = 3;
+ * @return {!(string|Uint8Array)}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.prototype.getBitvec = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * optional bytes bitvec = 3;
+ * This is a type-conversion wrapper around `getBitvec()`
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.prototype.getBitvec_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getBitvec()));
+};
+
+
+/**
+ * optional bytes bitvec = 3;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getBitvec()`
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.prototype.getBitvec_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getBitvec()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Uptime} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Uptime.prototype.setBitvec = function(value) {
+  return jspb.Message.setProto3BytesField(this, 3, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    consensusKeysList: jspb.Message.toObjectList(msg.getConsensusKeysList(),
+    penumbra_core_keys_v1alpha1_keys_pb.ConsensusKey.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys;
+  return proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.ConsensusKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.ConsensusKey.deserializeBinaryFromReader);
+      msg.addConsensusKeys(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getConsensusKeysList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.ConsensusKey.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated penumbra.core.keys.v1alpha1.ConsensusKey consensus_keys = 1;
+ * @return {!Array<!proto.penumbra.core.keys.v1alpha1.ConsensusKey>}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.prototype.getConsensusKeysList = function() {
+  return /** @type{!Array<!proto.penumbra.core.keys.v1alpha1.ConsensusKey>} */ (
+    jspb.Message.getRepeatedWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.ConsensusKey, 1));
+};
+
+
+/**
+ * @param {!Array<!proto.penumbra.core.keys.v1alpha1.ConsensusKey>} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.prototype.setConsensusKeysList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.penumbra.core.keys.v1alpha1.ConsensusKey=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.penumbra.core.keys.v1alpha1.ConsensusKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.prototype.addConsensusKeys = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.penumbra.core.keys.v1alpha1.ConsensusKey, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentConsensusKeys.prototype.clearConsensusKeysList = function() {
+  return this.setConsensusKeysList([]);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Penalty.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.Penalty.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Penalty} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.Penalty.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    inner: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Penalty}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Penalty.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.Penalty;
+  return proto.penumbra.core.component.stake.v1alpha1.Penalty.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Penalty} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Penalty}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Penalty.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setInner(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Penalty.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.Penalty.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Penalty} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.Penalty.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getInner();
+  if (f !== 0) {
+    writer.writeUint64(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional uint64 inner = 1;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.Penalty.prototype.getInner = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Penalty} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.Penalty.prototype.setInner = function(value) {
+  return jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    chainId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    showInactive: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest;
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChainId(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setShowInactive(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getChainId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getShowInactive();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string chain_id = 1;
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.prototype.getChainId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.prototype.setChainId = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional bool show_inactive = 2;
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.prototype.getShowInactive = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoRequest.prototype.setShowInactive = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    validatorInfo: (f = msg.getValidatorInfo()) && proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse;
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.deserializeBinaryFromReader);
+      msg.setValidatorInfo(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValidatorInfo();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional ValidatorInfo validator_info = 1;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.prototype.getValidatorInfo = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.ValidatorInfo|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.prototype.setValidatorInfo = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.prototype.clearValidatorInfo = function() {
+  return this.setValidatorInfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorInfoResponse.prototype.hasValidatorInfo = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    chainId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    identityKey: (f = msg.getIdentityKey()) && penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest;
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChainId(value);
+      break;
+    case 2:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.IdentityKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.deserializeBinaryFromReader);
+      msg.setIdentityKey(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getChainId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getIdentityKey();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string chain_id = 1;
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.prototype.getChainId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.prototype.setChainId = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional penumbra.core.keys.v1alpha1.IdentityKey identity_key = 2;
+ * @return {?proto.penumbra.core.keys.v1alpha1.IdentityKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.prototype.getIdentityKey = function() {
+  return /** @type{?proto.penumbra.core.keys.v1alpha1.IdentityKey} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.IdentityKey, 2));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.keys.v1alpha1.IdentityKey|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.prototype.setIdentityKey = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.prototype.clearIdentityKey = function() {
+  return this.setIdentityKey(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusRequest.prototype.hasIdentityKey = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    status: (f = msg.getStatus()) && proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse;
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.deserializeBinaryFromReader);
+      msg.setStatus(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getStatus();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional ValidatorStatus status = 1;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.prototype.getStatus = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.ValidatorStatus|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.prototype.setStatus = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.prototype.clearStatus = function() {
+  return this.setStatus(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorStatusResponse.prototype.hasStatus = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    chainId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    identityKey: (f = msg.getIdentityKey()) && penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.toObject(includeInstance, f),
+    startEpochIndex: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    endEpochIndex: jspb.Message.getFieldWithDefault(msg, 4, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest;
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChainId(value);
+      break;
+    case 2:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.IdentityKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.deserializeBinaryFromReader);
+      msg.setIdentityKey(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setStartEpochIndex(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setEndEpochIndex(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getChainId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getIdentityKey();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.serializeBinaryToWriter
+    );
+  }
+  f = message.getStartEpochIndex();
+  if (f !== 0) {
+    writer.writeUint64(
+      3,
+      f
+    );
+  }
+  f = message.getEndEpochIndex();
+  if (f !== 0) {
+    writer.writeUint64(
+      4,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string chain_id = 1;
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.prototype.getChainId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.prototype.setChainId = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional penumbra.core.keys.v1alpha1.IdentityKey identity_key = 2;
+ * @return {?proto.penumbra.core.keys.v1alpha1.IdentityKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.prototype.getIdentityKey = function() {
+  return /** @type{?proto.penumbra.core.keys.v1alpha1.IdentityKey} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.IdentityKey, 2));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.keys.v1alpha1.IdentityKey|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.prototype.setIdentityKey = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.prototype.clearIdentityKey = function() {
+  return this.setIdentityKey(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.prototype.hasIdentityKey = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional uint64 start_epoch_index = 3;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.prototype.getStartEpochIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.prototype.setStartEpochIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional uint64 end_epoch_index = 4;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.prototype.getEndEpochIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyRequest.prototype.setEndEpochIndex = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    penalty: (f = msg.getPenalty()) && proto.penumbra.core.component.stake.v1alpha1.Penalty.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse;
+  return proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.Penalty;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.Penalty.deserializeBinaryFromReader);
+      msg.setPenalty(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPenalty();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.Penalty.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Penalty penalty = 1;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.Penalty}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.prototype.getPenalty = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.Penalty} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.Penalty, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.Penalty|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.prototype.setPenalty = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.prototype.clearPenalty = function() {
+  return this.setPenalty(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.ValidatorPenaltyResponse.prototype.hasPenalty = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    chainId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    identityKey: (f = msg.getIdentityKey()) && penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest;
+  return proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChainId(value);
+      break;
+    case 2:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.IdentityKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.deserializeBinaryFromReader);
+      msg.setIdentityKey(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getChainId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getIdentityKey();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string chain_id = 1;
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.prototype.getChainId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.prototype.setChainId = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional penumbra.core.keys.v1alpha1.IdentityKey identity_key = 2;
+ * @return {?proto.penumbra.core.keys.v1alpha1.IdentityKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.prototype.getIdentityKey = function() {
+  return /** @type{?proto.penumbra.core.keys.v1alpha1.IdentityKey} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.IdentityKey, 2));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.keys.v1alpha1.IdentityKey|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.prototype.setIdentityKey = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.prototype.clearIdentityKey = function() {
+  return this.setIdentityKey(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateRequest.prototype.hasIdentityKey = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    data: (f = msg.getData()) && proto.penumbra.core.component.stake.v1alpha1.RateData.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse;
+  return proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.RateData;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.RateData.deserializeBinaryFromReader);
+      msg.setData(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getData();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.RateData.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional RateData data = 1;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.RateData}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.prototype.getData = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.RateData} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.RateData, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.RateData|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.prototype.setData = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.prototype.clearData = function() {
+  return this.setData(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.CurrentValidatorRateResponse.prototype.hasData = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    chainId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    identityKey: (f = msg.getIdentityKey()) && penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest;
+  return proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChainId(value);
+      break;
+    case 2:
+      var value = new penumbra_core_keys_v1alpha1_keys_pb.IdentityKey;
+      reader.readMessage(value,penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.deserializeBinaryFromReader);
+      msg.setIdentityKey(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getChainId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getIdentityKey();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      penumbra_core_keys_v1alpha1_keys_pb.IdentityKey.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string chain_id = 1;
+ * @return {string}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.prototype.getChainId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.prototype.setChainId = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional penumbra.core.keys.v1alpha1.IdentityKey identity_key = 2;
+ * @return {?proto.penumbra.core.keys.v1alpha1.IdentityKey}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.prototype.getIdentityKey = function() {
+  return /** @type{?proto.penumbra.core.keys.v1alpha1.IdentityKey} */ (
+    jspb.Message.getWrapperField(this, penumbra_core_keys_v1alpha1_keys_pb.IdentityKey, 2));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.keys.v1alpha1.IdentityKey|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.prototype.setIdentityKey = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.prototype.clearIdentityKey = function() {
+  return this.setIdentityKey(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateRequest.prototype.hasIdentityKey = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    data: (f = msg.getData()) && proto.penumbra.core.component.stake.v1alpha1.RateData.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse;
+  return proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.RateData;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.RateData.deserializeBinaryFromReader);
+      msg.setData(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getData();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.RateData.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional RateData data = 1;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.RateData}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.prototype.getData = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.RateData} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.RateData, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.RateData|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.prototype.setData = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.prototype.clearData = function() {
+  return this.setData(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.NextValidatorRateResponse.prototype.hasData = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.StakeParameters.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.StakeParameters} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    unbondingEpochs: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    activeValidatorLimit: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    baseRewardRate: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    slashingPenaltyMisbehavior: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    slashingPenaltyDowntime: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    signedBlocksWindowLen: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    missedBlocksMaximum: jspb.Message.getFieldWithDefault(msg, 7, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.StakeParameters}
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.StakeParameters;
+  return proto.penumbra.core.component.stake.v1alpha1.StakeParameters.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.StakeParameters} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.StakeParameters}
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setUnbondingEpochs(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setActiveValidatorLimit(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setBaseRewardRate(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSlashingPenaltyMisbehavior(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSlashingPenaltyDowntime(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSignedBlocksWindowLen(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setMissedBlocksMaximum(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.StakeParameters.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.StakeParameters} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getUnbondingEpochs();
+  if (f !== 0) {
+    writer.writeUint64(
+      1,
+      f
+    );
+  }
+  f = message.getActiveValidatorLimit();
+  if (f !== 0) {
+    writer.writeUint64(
+      2,
+      f
+    );
+  }
+  f = message.getBaseRewardRate();
+  if (f !== 0) {
+    writer.writeUint64(
+      3,
+      f
+    );
+  }
+  f = message.getSlashingPenaltyMisbehavior();
+  if (f !== 0) {
+    writer.writeUint64(
+      4,
+      f
+    );
+  }
+  f = message.getSlashingPenaltyDowntime();
+  if (f !== 0) {
+    writer.writeUint64(
+      5,
+      f
+    );
+  }
+  f = message.getSignedBlocksWindowLen();
+  if (f !== 0) {
+    writer.writeUint64(
+      6,
+      f
+    );
+  }
+  f = message.getMissedBlocksMaximum();
+  if (f !== 0) {
+    writer.writeUint64(
+      7,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional uint64 unbonding_epochs = 1;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.getUnbondingEpochs = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.StakeParameters} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.setUnbondingEpochs = function(value) {
+  return jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional uint64 active_validator_limit = 2;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.getActiveValidatorLimit = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.StakeParameters} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.setActiveValidatorLimit = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional uint64 base_reward_rate = 3;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.getBaseRewardRate = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.StakeParameters} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.setBaseRewardRate = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional uint64 slashing_penalty_misbehavior = 4;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.getSlashingPenaltyMisbehavior = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.StakeParameters} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.setSlashingPenaltyMisbehavior = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional uint64 slashing_penalty_downtime = 5;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.getSlashingPenaltyDowntime = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.StakeParameters} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.setSlashingPenaltyDowntime = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional uint64 signed_blocks_window_len = 6;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.getSignedBlocksWindowLen = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.StakeParameters} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.setSignedBlocksWindowLen = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional uint64 missed_blocks_maximum = 7;
+ * @return {number}
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.getMissedBlocksMaximum = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.StakeParameters} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.StakeParameters.prototype.setMissedBlocksMaximum = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
+};
+
+
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.prototype.toObject = function(opt_includeInstance) {
+  return proto.penumbra.core.component.stake.v1alpha1.GenesisContent.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.GenesisContent} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    stakeParams: (f = msg.getStakeParams()) && proto.penumbra.core.component.stake.v1alpha1.StakeParameters.toObject(includeInstance, f),
+    validatorsList: jspb.Message.toObjectList(msg.getValidatorsList(),
+    proto.penumbra.core.component.stake.v1alpha1.Validator.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.GenesisContent}
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.penumbra.core.component.stake.v1alpha1.GenesisContent;
+  return proto.penumbra.core.component.stake.v1alpha1.GenesisContent.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.GenesisContent} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.GenesisContent}
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.StakeParameters;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.StakeParameters.deserializeBinaryFromReader);
+      msg.setStakeParams(value);
+      break;
+    case 2:
+      var value = new proto.penumbra.core.component.stake.v1alpha1.Validator;
+      reader.readMessage(value,proto.penumbra.core.component.stake.v1alpha1.Validator.deserializeBinaryFromReader);
+      msg.addValidators(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.penumbra.core.component.stake.v1alpha1.GenesisContent.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.GenesisContent} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getStakeParams();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.StakeParameters.serializeBinaryToWriter
+    );
+  }
+  f = message.getValidatorsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.penumbra.core.component.stake.v1alpha1.Validator.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional StakeParameters stake_params = 1;
+ * @return {?proto.penumbra.core.component.stake.v1alpha1.StakeParameters}
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.prototype.getStakeParams = function() {
+  return /** @type{?proto.penumbra.core.component.stake.v1alpha1.StakeParameters} */ (
+    jspb.Message.getWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.StakeParameters, 1));
+};
+
+
+/**
+ * @param {?proto.penumbra.core.component.stake.v1alpha1.StakeParameters|undefined} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.GenesisContent} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.prototype.setStakeParams = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.GenesisContent} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.prototype.clearStakeParams = function() {
+  return this.setStakeParams(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.prototype.hasStakeParams = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * repeated Validator validators = 2;
+ * @return {!Array<!proto.penumbra.core.component.stake.v1alpha1.Validator>}
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.prototype.getValidatorsList = function() {
+  return /** @type{!Array<!proto.penumbra.core.component.stake.v1alpha1.Validator>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.penumbra.core.component.stake.v1alpha1.Validator, 2));
+};
+
+
+/**
+ * @param {!Array<!proto.penumbra.core.component.stake.v1alpha1.Validator>} value
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.GenesisContent} returns this
+*/
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.prototype.setValidatorsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.penumbra.core.component.stake.v1alpha1.Validator=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.Validator}
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.prototype.addValidators = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.penumbra.core.component.stake.v1alpha1.Validator, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.penumbra.core.component.stake.v1alpha1.GenesisContent} returns this
+ */
+proto.penumbra.core.component.stake.v1alpha1.GenesisContent.prototype.clearValidatorsList = function() {
+  return this.setValidatorsList([]);
+};
+
+
+goog.object.extend(exports, proto.penumbra.core.component.stake.v1alpha1);

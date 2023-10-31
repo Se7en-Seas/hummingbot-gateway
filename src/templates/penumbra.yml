@@ -1,0 +1,7 @@
+networks:
+  # No mainnet yet
+  testnet:
+    rpcURL: localhost:8081 # This should be your pclientd rpc url
+    tokenListType: URL
+    tokenListSource: https://cosmos-chain-registry-list.vercel.app/list.json
+network: testnet

@@ -1,0 +1,6 @@
+networks:
+  testnet:
+    rpcURL: localhost:8081
+    tokenListType: URL
+    tokenListSource: https://cosmos-chain-registry-list.vercel.app/list.json
+network: testnet
