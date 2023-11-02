@@ -10,17 +10,16 @@ export interface Config {
 }
 
 export namespace PenumbraConfig {
-  export const config: Config = getPenumbraConfig('penumbra');
+  export const config: Config = getPenumbraConfig('testnet');
 }
 
-export function getPenumbraConfig(chainName: string): Config {
+export function getPenumbraConfig(network: string): Config {
   const configManager = ConfigManagerV2.getInstance();
-  const network = configManager.get(chainName + '.network');
 
   return {
     network: {
       name: network,
-      rpcURL: configManager.get(chainName + '.networks.' + network + '.rpcURL'),
+      rpcURL: configManager.get('penumbra.networks.' + network + '.rpcURL'),
     },
   };
 }

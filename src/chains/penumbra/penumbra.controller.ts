@@ -1,7 +1,18 @@
 import { PenumbraConfig } from './penumbra.config';
+import { Penumbra } from './penumbra';
 
 import { ViewProtocolServiceClient } from './generated/penumbra/view/v1alpha1/view_grpc_pb';
 import { BalancesRequest, BalancesResponse } from './generated/penumbra/view/v1alpha1/view_pb';
+import {
+  //BalanceRequest,
+  //PollRequest,
+  //StatusRequest,
+  TokensRequest,
+  //PollResponse,
+  //StatusResponse,
+  TokensResponse,
+  //BalanceResponse,
+} from '../../network/network.requests';
 
 const grpc = require('@grpc/grpc-js');
 
@@ -34,8 +45,22 @@ export class PenumbraController {
       });
     });
   }
+
+  static async getTokens(
+    penumbra: Penumbra,
+    request: TokensRequest
+  ): Promise<TokensResponse> {
+    // TODO: Implement
+    console.log(penumbra)
+    console.log(request)
+
+    return {
+      tokens: [],
+    };
+  }
 }
 
+/*
 async function getBalances() {
   const balances = await PenumbraController.balances(new BalancesRequest());
 
@@ -44,6 +69,7 @@ async function getBalances() {
 }
 
 getBalances();
+*/
 
 // To run this file locally
 // npm install -g ts-node typescript '@types/node'
