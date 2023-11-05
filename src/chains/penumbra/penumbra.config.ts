@@ -2,6 +2,7 @@ import { ConfigManagerV2 } from '../../services/config-manager-v2';
 
 export interface NetworkConfig {
   name: string;
+  id: string;
   rpcURL: string;
 }
 
@@ -19,6 +20,7 @@ export function getPenumbraConfig(network: string): Config {
   return {
     network: {
       name: network,
+      id: configManager.get('penumbra.networks.' + network + '.id'),
       rpcURL: configManager.get('penumbra.networks.' + network + '.rpcURL'),
     },
   };

@@ -1,0 +1,29 @@
+{
+  "src": "https://buf.build/studio/penumbra-zone/penumbra/main/penumbra.core.component.shielded_pool.v1alpha1.QueryService/DenomMetadataById?target=https%3A%2F%2Fgrpc.testnet.penumbra.zone&selectedProtocol=grpc-web&share=swqq5lJQUEosLk4t8UxRslIAcYECmXl5qUVArpJHuJFroXFoVFiwU0lJfmh5aKa%2Bb2iJq3lRkVFoqLl%2BqIepgUFSZYG5v2OyrRJQby1XLQA",
+  "tokens": [
+    {
+      "symbol": "gm",
+      "id": "HW2Eq3UZVSBttoUwUi/MUtE7rr2UU7/UH500byp7OAc=",
+      "decimals": 6,
+      "baseDenom": "ugm"
+    },
+    {
+      "symbol": "test_usd",
+      "id": "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=",
+      "decimals": 18,
+      "baseDenom": "wtest_usd"
+    },
+    {
+      "symbol": "penumbra",
+      "id": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=",
+      "decimals": 6,
+      "baseDenom": "upenumbra"
+    },
+    {
+      "symbol": "gn",
+      "id": "nwPDkQq3OvLnBwGTD+nmv1Ifb2GEmFCgNHrU++9BsRE=",
+      "decimals": 6,
+      "baseDenom": "ugn"
+    }
+  ]
+}

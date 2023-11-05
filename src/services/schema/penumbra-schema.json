@@ -8,11 +8,12 @@
         "^\\w+$": {
           "type": "object",
           "properties": {
+            "id": { "type": "string" },
             "rpcURL": { "type": "string" },
             "tokenListType": { "type": "string" },
             "tokenListSource": { "type": "string" }
           },
-          "required": ["rpcURL", "tokenListType", "tokenListSource"],
+          "required": ["id", "rpcURL", "tokenListType", "tokenListSource"],
           "additionalProperties": false
         }
       },

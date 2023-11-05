@@ -12,12 +12,14 @@ export class Penumbra {
   private _metricsLogInterval: number;
   private _metricTimer;
   private _network: string;
+  private _id: string;
   public controller: typeof PenumbraController;
 
   private constructor(network: string) {
     // TODO: Move service initializations here
-    this._network = network;
     const config = getPenumbraConfig(network);
+    this._network = config.network.name;
+    this._id = config.network.id;
     this._rpcUrl = config.network.rpcURL;
     this._requestCount = 0;
     this._metricsLogInterval = 300000; // 5 minutes
@@ -87,7 +89,7 @@ export class Penumbra {
   }
 
   public get chainId(): string {
-    return 'penumbra';
+    return this._id;
   }
 
   public get chain(): string {
@@ -96,6 +98,10 @@ export class Penumbra {
 
   public get network(): string {
     return this._network;
+  }
+
+  public get id(): string {
+    return this._id;
   }
 
   public get rpcUrl(): string {
