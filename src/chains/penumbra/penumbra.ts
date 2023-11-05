@@ -1,7 +1,15 @@
 import { logger } from '../../services/logger';
+import { promises as fs } from 'fs';
 
 import { PenumbraController } from './penumbra.controller';
 import { getPenumbraConfig } from './penumbra.config';
+
+export interface TokenInfo {
+  symbol: string;
+  id: string;
+  decimals: number;
+  baseDenom: string;
+}
 
 export class Penumbra {
   private static _instances: { [name: string]: Penumbra };
@@ -13,6 +21,10 @@ export class Penumbra {
   private _metricTimer;
   private _network: string;
   private _id: string;
+  private _tokenListSource: string;
+  private _tokenSymbolMap: { [symbol: string]: TokenInfo } = {};
+  private _tokenAddressMap: { [address: string]: TokenInfo } = {};
+  public tokenList: TokenInfo[] = [];
   public controller: typeof PenumbraController;
 
   private constructor(network: string) {
@@ -21,6 +33,7 @@ export class Penumbra {
     this._network = config.network.name;
     this._id = config.network.id;
     this._rpcUrl = config.network.rpcURL;
+    this._tokenListSource = config.network.tokenListSource;
     this._requestCount = 0;
     this._metricsLogInterval = 300000; // 5 minutes
 
@@ -44,6 +57,10 @@ export class Penumbra {
           //);
 
           // TODO: Move service initializations here
+
+          // Load tokens
+          await this.loadTokens(this._tokenListSource);
+
           return true;
         } catch (e) {
           logger.error(`Failed to initialize ${this.chain} chain: ${e}`);
@@ -88,6 +105,20 @@ export class Penumbra {
     this._requestCount = 0; // reset
   }
 
+  private async loadTokens(
+    tokenListSource: string,
+  ): Promise<void> {
+    const tokens = JSON.parse(await fs.readFile(tokenListSource, 'utf8')).tokens;
+
+    // Load _tokenSymbolMap, _tokenAddressMap, and tokenList
+    for (const token of tokens) {
+      const { symbol, id, decimals, baseDenom } = token;
+      this._tokenSymbolMap[symbol] = { symbol, id, decimals, baseDenom };
+      this._tokenAddressMap[id] = { symbol, id, decimals, baseDenom };
+      this.tokenList.push({ symbol, id, decimals, baseDenom });
+    }
+  }
+
   public get chainId(): string {
     return this._id;
   }
@@ -110,6 +141,14 @@ export class Penumbra {
 
   public get nativeCurrency(): string {
     return 'penumbra';
+  }
+
+  public get tokenSymbolMap(): { [symbol: string]: TokenInfo } {
+    return this._tokenSymbolMap;
+  }
+
+  public get tokenAddressMap(): { [address: string]: TokenInfo } {
+    return this._tokenAddressMap;
   }
 
   public get requestCount(): number {

@@ -4,6 +4,7 @@ export interface NetworkConfig {
   name: string;
   id: string;
   rpcURL: string;
+  tokenListSource: string;
 }
 
 export interface Config {
@@ -22,6 +23,8 @@ export function getPenumbraConfig(network: string): Config {
       name: network,
       id: configManager.get('penumbra.networks.' + network + '.id'),
       rpcURL: configManager.get('penumbra.networks.' + network + '.rpcURL'),
+      tokenListSource:
+        configManager.get('penumbra.networks.' + network + '.tokenListSource'),
     },
   };
 }

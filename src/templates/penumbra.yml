@@ -4,5 +4,5 @@ networks:
     id: penumbra-testnet-rhea
     rpcURL: localhost:8081 # This should be your pclientd rpc url
     tokenListType: FILE
-    tokenListSource: /home/gateway/conf/lists/penumbra_tokens_testnet.json
+    tokenListSource: ./conf/lists/penumbra_tokens_testnet.json
 network: testnet
