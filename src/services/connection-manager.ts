@@ -42,6 +42,7 @@ import { Tinyman } from '../connectors/tinyman/tinyman';
 import { Plenty } from '../connectors/plenty/plenty';
 import { Kujira } from '../chains/kujira/kujira';
 import { KujiraCLOB } from '../connectors/kujira/kujira';
+import { PenumbraCLOB } from '../connectors/penumbra/penumbra';
 
 export type ChainUnion =
   | Algorand
@@ -134,7 +135,7 @@ export async function getChainInstance(
   } else if (chain === 'kujira') {
     connection = Kujira.getInstance(network);
   } else if (chain === 'penumbra') {
-    connection = Penumbra.getInstance(network)
+    connection = Penumbra.getInstance(network);
   } else {
     connection = undefined;
   }
@@ -151,7 +152,8 @@ export type ConnectorUnion =
   | InjectiveClobPerp
   | Tinyman
   | Plenty
-  | KujiraCLOB;
+  | KujiraCLOB
+  | PenumbraCLOB;
 
 export type Connector<T> = T extends Uniswapish
   ? Uniswapish
@@ -225,6 +227,8 @@ export async function getConnector<T>(
     connectorInstance = Plenty.getInstance(network);
   } else if (chain === 'kujira' && connector === 'kujira') {
     connectorInstance = KujiraCLOB.getInstance(chain, network);
+  } else if (chain === 'penumbra' && connector === 'penumbra') {
+    connectorInstance = PenumbraCLOB.getInstance(chain, network);
   } else {
     throw new Error('unsupported chain or connector');
   }
