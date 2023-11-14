@@ -93,7 +93,7 @@ export class PenumbraCLOB {
     req: ClobMarketsRequest
   ): Promise<{ markets: CLOBMarkets }> {
     // Reload markets for freshes data
-    // this.loadMarkets();
+    this.loadMarkets();
 
     if (req.market && req.market.split('-').length === 2) {
       const resp: CLOBMarkets = {};
