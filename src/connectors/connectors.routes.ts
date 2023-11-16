@@ -20,6 +20,7 @@ import { DexalotCLOBConfig } from './dexalot/dexalot.clob.config';
 import { TinymanConfig } from './tinyman/tinyman.config';
 import { PlentyConfig } from './plenty/plenty.config';
 import { KujiraConfig } from './kujira/kujira.config';
+import { PenumbraCLOBConfig } from './penumbra/penumbra.clob.config';
 
 export namespace ConnectorsRoutes {
   export const router = Router();
@@ -160,6 +161,16 @@ export namespace ConnectorsRoutes {
             additional_add_wallet_prompts: {
               accountId:
                 'Enter your kujira account number (input 0 if unsure) >>> ',
+            },
+          },
+          {
+            name: 'penumbra',
+            trading_type: PenumbraCLOBConfig.config.tradingTypes,
+            chain_type: PenumbraCLOBConfig.config.chainType,
+            available_networks: PenumbraCLOBConfig.config.availableNetworks,
+            additional_add_wallet_prompts: {
+              accountId:
+                'Enter your penumbra sub account id wallet key (input 0 if unsure) >>> ',
             },
           },
         ],

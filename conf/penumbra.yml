@@ -1,0 +1,7 @@
+networks:
+  testnet:
+    id: penumbra-testnet-rhea
+    rpcURL: localhost:8081
+    tokenListType: FILE
+    tokenListSource: ./conf/lists/penumbra_tokens_testnet.json
+network: testnet

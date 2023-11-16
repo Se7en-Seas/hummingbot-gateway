@@ -8,6 +8,7 @@ import { Injective } from '../chains/injective/injective';
 import { Xdc } from '../chains/xdc/xdc';
 import { Tezos } from '../chains/tezos/tezos';
 import { Kujira } from '../chains/kujira/kujira';
+import { Penumbra } from '../chains/penumbra/penumbra';
 import {
   HttpException,
   UNKNOWN_CHAIN_ERROR_CODE,
@@ -108,6 +109,11 @@ export async function getStatus(
     connections = connections.concat(
       kujiraConnections ? Object.values(kujiraConnections) : []
     );
+
+    const penumbraConnections = Penumbra.getConnectedInstances();
+    connections = connections.concat(
+      penumbraConnections ? Object.values(penumbraConnections) : []
+    );
   }
 
   for (const connection of connections) {
@@ -120,7 +126,10 @@ export async function getStatus(
     try {
       currentBlockNumber = await connection.getCurrentBlockNumber();
     } catch (_e) {
-      if (await connection.provider.getNetwork()) currentBlockNumber = 1; // necessary for connectors like hedera that do not have concept of blocknumber
+      // Check if provider exists, not all chain integrations need or have them
+      if (!connection.provider) {
+        console.info('Provider not found for chain ', chain, network);
+      } else if (await connection.provider.getNetwork()) currentBlockNumber = 1; // necessary for connectors like hedera that do not have concept of blocknumber
     }
     statuses.push({
       chain,

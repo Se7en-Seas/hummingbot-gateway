@@ -22,7 +22,7 @@ import { getAddress } from 'ethers/lib/utils';
 
 // information about an Ethereum token
 export interface TokenInfo {
-  chainId: number;
+  chainId: number | string;
   address: string;
   name: string;
   symbol: string;

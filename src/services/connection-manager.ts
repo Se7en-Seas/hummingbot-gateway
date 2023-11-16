@@ -37,10 +37,12 @@ import { Xsswap } from '../connectors/xsswap/xsswap';
 import { DexalotCLOB } from '../connectors/dexalot/dexalot';
 import { Algorand } from '../chains/algorand/algorand';
 import { Cosmos } from '../chains/cosmos/cosmos';
+import { Penumbra } from '../chains/penumbra/penumbra';
 import { Tinyman } from '../connectors/tinyman/tinyman';
 import { Plenty } from '../connectors/plenty/plenty';
 import { Kujira } from '../chains/kujira/kujira';
 import { KujiraCLOB } from '../connectors/kujira/kujira';
+import { PenumbraCLOB } from '../connectors/penumbra/penumbra';
 
 export type ChainUnion =
   | Algorand
@@ -50,7 +52,8 @@ export type ChainUnion =
   | Injective
   | Xdcish
   | Tezosish
-  | Kujira;
+  | Kujira
+  | Penumbra;
 
 export type Chain<T> = T extends Algorand
   ? Algorand
@@ -131,6 +134,8 @@ export async function getChainInstance(
     connection = Tezos.getInstance(network);
   } else if (chain === 'kujira') {
     connection = Kujira.getInstance(network);
+  } else if (chain === 'penumbra') {
+    connection = Penumbra.getInstance(network);
   } else {
     connection = undefined;
   }
@@ -147,7 +152,8 @@ export type ConnectorUnion =
   | InjectiveClobPerp
   | Tinyman
   | Plenty
-  | KujiraCLOB;
+  | KujiraCLOB
+  | PenumbraCLOB;
 
 export type Connector<T> = T extends Uniswapish
   ? Uniswapish
@@ -221,6 +227,8 @@ export async function getConnector<T>(
     connectorInstance = Plenty.getInstance(network);
   } else if (chain === 'kujira' && connector === 'kujira') {
     connectorInstance = KujiraCLOB.getInstance(chain, network);
+  } else if (chain === 'penumbra' && connector === 'penumbra') {
+    connectorInstance = PenumbraCLOB.getInstance(chain, network);
   } else {
     throw new Error('unsupported chain or connector');
   }

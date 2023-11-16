@@ -1,0 +1,45 @@
+import { ConfigManagerV2 } from '../../services/config-manager-v2';
+
+export interface NetworkConfig {
+  name: string;
+  id: string;
+  rpcURL: string;
+  tokenListSource: string;
+}
+
+export interface Config {
+  network: NetworkConfig;
+}
+
+export namespace PenumbraConfig {
+  export const config: Config = getPenumbraConfig('testnet');
+}
+
+export function getPenumbraConfig(network: string): Config {
+  const configManager = ConfigManagerV2.getInstance();
+
+  return {
+    network: {
+      name: network,
+      id: configManager.get('penumbra.networks.' + network + '.id'),
+      rpcURL: configManager.get('penumbra.networks.' + network + '.rpcURL'),
+      tokenListSource:
+        configManager.get('penumbra.networks.' + network + '.tokenListSource'),
+    },
+  };
+}
+
+// !
+// PROTO COMPILATION COMANDS -- Must run from base repo directory
+// npm install grpc-tools @grpc/proto-loader grpc_tools_node_protoc_ts --legacy-peer-deps
+/*
+
+find /Users/phil/Desktop/hummingbot/hummingbot-gateway/src/chains/penumbra -name "*.proto" | xargs npx grpc_tools_node_protoc \
+    --js_out=import_style=commonjs,binary:/Users/phil/Desktop/hummingbot/hummingbot-gateway/src/chains/penumbra/generated \
+    --grpc_out=grpc_js:/Users/phil/Desktop/hummingbot/hummingbot-gateway/src/chains/penumbra/generated \
+    --plugin=protoc-gen-grpc=./node_modules/.bin/grpc_tools_node_protoc_plugin \
+    --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts \
+    --ts_out=service=grpc-node:/Users/phil/Desktop/hummingbot/hummingbot-gateway/src/chains/penumbra/generated \
+    -I/Users/phil/Desktop/hummingbot/hummingbot-gateway/src/chains/penumbra/proto/penumbra
+
+*/
